@@ -1,12 +1,24 @@
+import React from 'react';
+import {Route, Routes, BrowserRouter } from 'react-router-dom';
 
+//components
+import Layout from './components/Layout';
+import Homepage from './pages/Homepage';
+
+//pages
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-red-500">Pathway Pro</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
     
-    </>
+    
 
   )
 }
