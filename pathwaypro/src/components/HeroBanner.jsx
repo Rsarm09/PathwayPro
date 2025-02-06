@@ -26,7 +26,7 @@ const HeroBanner = () => {
                     <input
                         type="text"
                         placeholder="Search Courses"
-                        className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                        className="p-3 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-gray-500 w-full"
                     />
                     <button className="bg-gray-600 font-semibold text-white px-6 py-3 rounded hover:bg-gray-700 flex items-center w-full md:w-auto">
                         <span className="mr-2">🔍</span> Search
