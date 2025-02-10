@@ -11,7 +11,7 @@ const Header = () => {
     <header className="bg-white shadow-md py-3 px-6 flex items-center justify-between">
       
       {/* Logo */}
-      <div className="text-xl font-bold">Logo</div>
+      <Link to="/" className="text-xl font-bold">Logo</Link>
 
       {/* Search Bar */}
       <div className="flex items-center border rounded-lg px-3 py-1 w-1/3 bg-gray-100">
@@ -26,10 +26,10 @@ const Header = () => {
       {/* Tablet & Mobile */}
       <div className="flex items-center space-x-4 text-black">
         <FaShoppingCart className="hidden md:inline text-xl cursor-pointer hover:text-gray-800" />
-        <FaUser className="hidden md:inline text-xl cursor-pointer hover:text-gray-800" />
+        <Link to="/login"><FaUser className="hidden md:inline text-xl cursor-pointer hover:text-gray-800" /></Link>
         <FaBell className="hidden md:inline text-xl cursor-pointer hover:text-gray-800" />
         <FaGlobe className="hidden md:inline text-xl cursor-pointer hover:text-gray-800" />
-        <button onClick={() => setMenuOpen(!menuOpen)} className="text-xl md:hidden">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="text-xl md:hidden cursor-pointer">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
@@ -39,7 +39,7 @@ const Header = () => {
         <nav className="absolute top-16 right-0 w-full text-center bg-white shadow-md p-4 flex flex-col space-y-4 md:hidden z-10">
           <Link to="/" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Shop</Link>
-          <Link to="/" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Profile</Link>
+          <Link to="/login" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Profile</Link>
           <Link to="/" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Notification</Link>
           <Link to="/" className="hover:text-gray-800" onClick={() => setMenuOpen(false)}>Language</Link>
         </nav>
