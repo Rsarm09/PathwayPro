@@ -1,20 +1,41 @@
-import placeholder from '../assets/placeholder.jpg';
+import CodingImg from "../assets/CodingImg.jpg";
 
 export const CARDDATA = [
     {
         id: "1",
-        image: placeholder,
+        image: CodingImg,
+        title: "Python 101",
+        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
 
     },
     {
         id: "2",
-        image: placeholder,
+        image: CodingImg,
+        title: "Python 101",
+        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
+
 
     },
     {
         id: "3",
-        image: placeholder,
+        image: CodingImg,
+        title: "Python 101",
+        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
 
-    }
+    },
+    {
+        id: "4",
+        image: CodingImg,
+        title: "Python 101",
+        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
+
+    },
+    {
+        id: "5",
+        image: CodingImg,
+        title: "Python 101",
+        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
+
+    },
 
 ]

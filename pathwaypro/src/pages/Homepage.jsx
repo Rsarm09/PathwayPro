@@ -17,13 +17,12 @@ function Homepage() {
   return (
     <>
       <HeroBanner />
-      <div className='container mx-auto pb-20'>
+      <div className='container mx-auto pb-20 mt-20'>
+      <h1 className="mainTitle">Popular Courses</h1>
           <MediaCard data={cardData}/>
-        <div className='mb-20'>
-          <Description />
-        </div>
           <Features />
           <Testimonials />
+          <Description />
       </div>
     </>
 

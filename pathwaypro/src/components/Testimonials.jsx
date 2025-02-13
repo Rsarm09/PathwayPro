@@ -2,17 +2,17 @@ import React from 'react'
 
 function Testimonials() {
     return (
-        <section class="bg-white">
-            <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <section class="">
+            <div class="mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
 
-                <h2 class="text-3xl font-bold text-gray-800">
+                <h2 class="mainTitle text-center">
                     They Value Our Courses
                 </h2>
 
                 {/* Testimonials*/}
                 <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
                     {/* Testimonial 1 */}
-                    <blockquote class="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+                    <blockquote class="rounded-lg bg-gray-100 p-6 shadow-xs sm:p-8">
                         <div class="flex items-center gap-4">
                             <img
                                 alt=""
@@ -86,7 +86,7 @@ function Testimonials() {
                     </blockquote>
 
                     {/* Testimonial 2*/}
-                    <blockquote class="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+                    <blockquote class="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
                         <div class="flex items-center gap-4">
                             <img
                                 alt=""
@@ -160,7 +160,7 @@ function Testimonials() {
                     </blockquote>
 
                     {/* Testimonial 3*/}
-                    <blockquote class="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+                    <blockquote class="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
                         <div class="flex items-center gap-4">
                             <img
                                 alt=""

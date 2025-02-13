@@ -1,52 +1,80 @@
-import React from 'react'
-
-//https://tailwindui.com/components/application-ui/forms/sign-in-forms
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Loginpage() {
     return (
+        <div className="flex h-screen flex-col justify-center items-center px-6 sm:px-8 bg-gray-100">
+            <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
+                {/* Logo */}
+                <h3 className="text-center text-xl font-bold">Logo</h3>
 
-        <div class="flex h-screen flex-col justify-center lg:px-8">
-            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                <h3 class="mx-auto h-10 w-auto text-xl font-bold flex justify-center">Logo</h3>
-                    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
-            </div>
+                {/* Heading */}
+                <h2 className="mt-6 text-center text-2xl font-bold text-gray-900">
+                    Sign in to your account
+                </h2>
 
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form class="space-y-6" action="#" method="POST">
+                {/* Form */}
+                <form className="mt-6 space-y-4" action="#" method="POST">
+                    {/* Email Input */}
                     <div>
-                        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
-                        <div class="mt-2">
-                            <input type="email" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm/6" />
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-900">
+                            Email address
+                        </label>
+                        <div className="mt-1">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                autoComplete="email"
+                                required
+                                className="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder-gray-400 focus:outline-none"
+                            />
                         </div>
                     </div>
 
+                    {/* Password Input */}
                     <div>
-                        <div class="flex items-center justify-between">
-                            <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
-                            <div class="text-sm">
-                                <a href="#" class="font-semibold text-gray-600 hover:text-gray-500">Forgot password?</a>
-                            </div>
+                        <div className="flex items-center justify-between">
+                            <label htmlFor="password" className="block text-sm font-medium text-gray-900">
+                                Password
+                            </label>
+                            <a href="#" className="text-sm font-semibold text-blueprimary hover:text-bluedark">
+                                Forgot password?
+                            </a>
                         </div>
-                        <div class="mt-2">
-                            <input type="password" name="password" id="password" autocomplete="current-password" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm/6" />
+                        <div className="mt-1">
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                autoComplete="current-password"
+                                required
+                                className="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder-gray-400 focus:outline-none"
+                            />
                         </div>
                     </div>
 
+                    {/* Sign In Button */}
                     <div>
-                        <button type="submit" class="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">Sign in</button>
+                        <Link
+                            to="/home"
+                            className="flex w-full justify-center rounded-md bg-blueprimary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-bluedark transition focus:ring-blueprimary"
+                        >
+                            Sign in
+                        </Link>
                     </div>
                 </form>
 
-                <p class="mt-10 text-center text-sm/6 text-gray-500">
-                    Not a member?
-                    <a href="#" class="font-semibold text-gray-600 hover:text-gray-500"> Start a 14 day free trial</a>
+                {/* Sign-up Link */}
+                <p className="mt-6 text-center text-sm text-black">
+                    Not a member?{' '}
+                    <a href="#" className="font-semibold text-blueprimary hover:text-bluedark">
+                        Start a 14-day free trial
+                    </a>
                 </p>
             </div>
         </div>
-
-
-
-    )
+    );
 }
 
-export default Loginpage
+export default Loginpage;

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className="relative mx-auto flex p-8 bg-gray-500 text-white">
+        <div className="relative mx-auto flex p-8 bg-bluedark text-white">
             <div>
                 <p> &copy; 2025 PathwayPro All Rights Reserved</p>
             </div>

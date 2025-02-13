@@ -1,9 +1,10 @@
 import React from 'react';
+import { FaSearch } from "react-icons/fa";
 
 const HeroBanner = () => {
     return (
         <div
-            className="relative py-20 flex flex-col justify-center items-center">
+            className="relative py-20 flex flex-col justify-center items-center bg-blueprimary">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
@@ -26,10 +27,10 @@ const HeroBanner = () => {
                     <input
                         type="text"
                         placeholder="Search Courses"
-                        className="p-3 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-gray-500 w-full"
+                        className="p-3 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blueprimary w-full transition"
                     />
-                    <button className="bg-gray-600 font-semibold text-white px-6 py-3 rounded hover:bg-gray-700 flex items-center w-full md:w-auto">
-                        <span className="mr-2">🔍</span> Search
+                    <button className="bg-blueprimary font-semibold text-white px-6 py-3 rounded hover:bg-bluedark flex items-center w-full md:w-auto transition">
+                        <span className="mr-2"><FaSearch /></span> Search
                     </button>
                 </div>
             </div>
