@@ -2,6 +2,8 @@ import React from 'react';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+//peepee
+
 const MediaCard = ({ data }) => {
     return (
         <div className='mb-20 '>
