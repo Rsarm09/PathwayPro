@@ -11,7 +11,11 @@ const Header = () => {
     <header className="bg-bluedark shadow-md py-3 px-6 flex items-center justify-between">
 
       {/* Logo */}
-      <Link to="/" className="text-xl font-bold">Logo</Link>
+      <div className="flex items-center justify-center space-x-6">
+        <Link to="/" className="text-xl font-bold text-white ">Pathway Pro</Link>
+        <Link to="/" className="text-base font-normal text-white ">Explore</Link>
+      </div>
+
 
       {/* Search Bar */}
       <div className="flex items-center border border-gray-300 rounded-lg px-3 py-1 w-1/3 bg-gray-100 focus:ring-blueprimary">
@@ -26,9 +30,17 @@ const Header = () => {
       {/* Tablet & Mobile */}
       <div className="flex items-center space-x-6 text-white">
         <div className="flex items-center justify-center space-x-6">
+          <Link to="/" className="text-base font-normal text-white ">Degree</Link>
+          <Link to="/" className="text-base font-normal text-white ">Careers</Link>
+          <Link to="/"> 
           <FaShoppingCart className="hidden md:inline text-xl cursor-pointer hover:text-gray-400 transition" />
+          </Link>
+          <Link to="/"> 
           <FaBell className="hidden md:inline text-xl cursor-pointer hover:text-gray-400 transition" />
+          </Link>
+          <Link to="/"> 
           <FaGlobe className="hidden md:inline text-xl cursor-pointer hover:text-gray-400 transition" />
+          </Link>
           <Link to="/login">
             <FaUserCircle className="hidden md:inline text-xl cursor-pointer hover:text-gray-400 transition" />
           </Link>
