@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .mainBtn {
-  @apply bg-blueprimary text-white font-semibold px-6 py-3 rounded transition hover:bg-bluedark mb-6 ;
+  @apply bg-blueprimary text-slate-100 font-semibold px-6 py-3 rounded transition hover:bg-bluedark mb-6 ;
 }
 
 .mainTitle {
@@ -15,4 +15,14 @@
   --color-greenprimary: #99D98C;
   --color-greenmedium: #75C893;
   --color-greendark: #50AD72;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #1E6091 !important; 
+  font-size: 3rem; 
+  opacity: 1; 
+}
+
+body {
+  @apply bg-slate-100;
 }

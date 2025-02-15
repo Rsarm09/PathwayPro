@@ -10,11 +10,11 @@ const Features = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-15 max-w-6xl mx-auto">
                 {/* Feature Card */}
                 <div className="text-center">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
-                        <FaChartBar className="text-2xl text-gray-800" />
+                        <FaChartBar className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Gurranteed Experts</h3>
                     <p className="text-gray-600 mt-2">
@@ -25,7 +25,7 @@ const Features = () => {
                 {/* Feature Card */}
                 <div className="text-center">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
-                        <FaPlayCircle className="text-2xl text-gray-800" />
+                        <FaPlayCircle className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Anytime, Anywhere</h3>
                     <p className="text-gray-600 mt-2">
@@ -36,7 +36,7 @@ const Features = () => {
                 {/* Feature Card */}
                 <div className="text-center">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
-                        <FaPencilAlt className="text-2xl text-gray-800" />
+                        <FaPencilAlt className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Comprehensive Material</h3>
                     <p className="text-gray-600 mt-2">
@@ -47,7 +47,7 @@ const Features = () => {
                 {/* Feature Card */}
                 <div className="text-center">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
-                        <FaWallet className="text-2xl text-gray-800" />
+                        <FaWallet className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Flexible Payment</h3>
                     <p className="text-gray-600 mt-2">

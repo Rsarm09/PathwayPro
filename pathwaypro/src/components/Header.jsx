@@ -46,7 +46,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <button onClick={() => setMenuOpen(!menuOpen)} className="text-xl md:hidden cursor-pointer text-white">
+      <button onClick={() => setMenuOpen(!menuOpen)} className="text-xl md:hidden cursor-pointer text-slate-100">
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
 

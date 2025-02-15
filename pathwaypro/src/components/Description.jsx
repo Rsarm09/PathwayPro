@@ -2,7 +2,7 @@ import React from 'react';
 
 const Description = () => {
     return (
-        <div className="m-20 flex flex-col md:flex-row overflow-hidden p-4 md:p-6 gap-6">
+        <div className="m-10 flex flex-col md:flex-row overflow-hidden p-4 md:p-6 gap-6">
             {/* Image Section */}
             <div className="w-full md:w-1/2">
                 <img
@@ -24,7 +24,7 @@ const Description = () => {
                 Pathway Pro is an online learning service where everyone has an opportunity to learn what they are passionate about. From design to web scripting, Pathway Pro has it all. We make sure we deliver top quality learning material with elite instructors to get you started to your passion! 
                 </p>
 
-                <button className="mainBtn mt-6 px-5">
+                <button className="mainBtn mt-1 px-5">
                     About Us
                 </button>
             </div>
