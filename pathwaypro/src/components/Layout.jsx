@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Outlet } from 'react-router-dom';
-
 import Footer from './Footer';
 import Header from './Header';
 
 function Layout() {
+
+    const [cart, setCart] = useState([]);
+  
   return (
     <div>
-        <Header />
+        <Header cart={cart} />
             <main>
-                <Outlet />
+                <Outlet context={{ cart, setCart }} />
             </main>
         <Footer />
     </div>

@@ -15,7 +15,7 @@ function Homepage() {
       <HeroBanner />
       <hr className=' border-2 border-bluedark' />
       <div className='container mx-auto pb-20 mt-20'>
-        <h1 className="mainTitle pl-8 md:pl-8 lg:pl-24 text-center sm:text-center md:text-left lg:text-left ">Popular Courses</h1>
+        <h1 className="mainTitle pl-8 md:pl-8 lg:pl-8 text-center ">Popular Courses</h1>
         <CarouselCard />
         <Features />
         <Testimonials />

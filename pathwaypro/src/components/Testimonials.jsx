@@ -2,26 +2,26 @@ import React from 'react'
 
 function Testimonials() {
     return (
-        <section class="">
-            <div class="mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <section className="">
+            <div className="mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
 
-                <h2 class="mainTitle text-center">
+                <h2 className="mainTitle text-center ml-3">
                     They Value Our Courses
                 </h2>
 
                 {/* Testimonials*/}
-                <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+                <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
                     {/* Testimonial 1 */}
-                    <blockquote class="rounded-lg bg-gray-100 p-6 shadow-xs sm:p-8">
-                        <div class="flex items-center gap-4">
+                    <blockquote className="rounded-lg bg-gray-100 border-bluedark p-6  shadow-xs sm:p-8">
+                        <div className="flex items-center gap-4">
                             <img
                                 alt=""
                                 src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                                class="size-14 rounded-full object-cover"
+                                className="size-14 rounded-full object-cover"
                             />
 
                             <div>
-                                <div class="flex justify-center gap-0.5 text-green-500">
+                                <div className="flex justify-center gap-0.5">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="size-5"
@@ -34,7 +34,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -44,7 +44,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -54,7 +54,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -74,29 +74,29 @@ function Testimonials() {
                                     </svg>
                                 </div>
 
-                                <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-700">
+                        <p className="mt-4 text-gray-700">
                             "Business Communication was informative, but I think adding role-playing exercises would make it more engaging"
                         </p>
                     </blockquote>
 
                     {/* Testimonial 2*/}
-                    <blockquote class="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
-                        <div class="flex items-center gap-4">
+                    <blockquote className="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
+                        <div className="flex items-center gap-4">
                             <img
                                 alt=""
                                 src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                class="size-14 rounded-full object-cover"
+                                className="size-14 rounded-full object-cover"
                             />
 
                             <div>
-                                <div class="flex justify-center gap-0.5 text-green-500">
+                                <div className="flex justify-center gap-0.5 text-green-500">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -106,7 +106,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -116,7 +116,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -126,7 +126,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -136,7 +136,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -146,18 +146,18 @@ function Testimonials() {
                                     </svg>
                                 </div>
 
-                                <p class="mt-0.5 text-lg font-medium text-gray-900">Emily James</p>
+                                <p className="mt-0.5 text-lg font-medium text-gray-900">Emily James</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-700">
+                        <p className="mt-4 text-gray-700">
                             "The UI/UX Design Principles course gave me a solid foundation, but I wish there were more real-world projects to practice with!"
                         </p>
                     </blockquote>
 
                     {/* Testimonial 3*/}
-                    <blockquote class="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
-                        <div class="flex items-center gap-4">
+                    <blockquote className="rounded-lg bg-gray-100  p-6 shadow-xs sm:p-8">
+                        <div className="flex items-center gap-4">
                             <img
                                 alt=""
                                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -165,10 +165,10 @@ function Testimonials() {
                             />
 
                             <div>
-                                <div class="flex justify-center gap-0.5 text-green-500">
+                                <div className="flex justify-center gap-0.5 text-green-500">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -178,7 +178,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -188,7 +188,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -198,7 +198,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -208,7 +208,7 @@ function Testimonials() {
                                     </svg>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="size-5"
+                                        className="size-5"
                                         viewBox="0 0 20 20"
                                         fill="#FFBF00"
                                     >
@@ -218,11 +218,11 @@ function Testimonials() {
                                     </svg>
                                 </div>
 
-                                <p class="mt-0.5 text-lg font-medium text-gray-900">Samantha Brooks</p>
+                                <p className="mt-0.5 text-lg font-medium text-gray-900">Samantha Brooks</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-700">
+                        <p className="mt-4 text-gray-700">
                             "Python 101 was great for beginners, but I struggled with debugging. A dedicated section on troubleshooting would be helpful!"
                         </p>
                     </blockquote>

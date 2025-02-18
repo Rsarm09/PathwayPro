@@ -8,6 +8,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 function CarouselCard() {
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   const [cardData, setCardData] = useState(CARDDATA);
   const blueDark = "#1E6091"; 
   
@@ -46,14 +50,17 @@ function CarouselCard() {
           .slick-prev:before, .slick-next:before {
             color: ${blueDark} !important;
           }
+          
+          
         `}
       </style>
            <Slider {...settings}>
                 {cardData.map((item) => (
-                  <div className='mb-20  '>
+                  <div className='mb-20 w-8 '>
                    <section className="flex flex-wrap justify-center">
                     <Link
                         to="/course"
+                        onClick={handleClick}
                         className="relative w-60 h-80 rounded overflow-hidden shadow-lg m-5 transition-transform duration-300 transform hover:scale-115 border-2 border-solid border-bluedark group cursor-pointer"
                         key={item.id}
                     >
@@ -72,8 +79,13 @@ function CarouselCard() {
                             {item.title}
                         </div>
 
+                        {/* Description (Appears on Hover) */}
+                        <div className="absolute top-12 text-slate-100 px-4 text-sm opacity-0 group-hover:opacity-100 transition select-none">
+                            {item.desc}
+                        </div>
+
                         {/* Hover Pills (Appear on Hover) */}
-                        <div className="absolute top-16 left-4 flex flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <div className="absolute bottom-14 left-4 flex flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                             <span className="bg-blue-500 text-slate-100 text-xs font-semibold px-3 py-1 rounded-full">
                                 Beginner-Friendly
                             </span>
@@ -83,11 +95,6 @@ function CarouselCard() {
                             <span className="bg-yellow-500 text-slate-100  text-xs font-semibold px-3 py-1 rounded-full">
                                 Certificate Included
                             </span>
-                        </div>
-
-                        {/* Description (Appears on Hover) */}
-                        <div className="absolute bottom-15 text-slate-100 px-5 text-sm opacity-0 group-hover:opacity-100 transition select-none">
-                            {item.desc}
                         </div>
 
                         {/* "Learn More" at the Bottom (Centered) */}

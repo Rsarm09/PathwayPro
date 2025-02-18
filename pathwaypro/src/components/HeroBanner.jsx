@@ -11,7 +11,7 @@ const HeroBanner = () => {
             <div className=" p-8 sm:p-8 md:p-10 lg:p16  relative right-1 sm:right-1 md:-right-2 lg:right-12  text-bluedark">
                 
                 {/* Headline */}
-                <h1 className="text-base sm:text-base md:text-xl lg:text-4xl font-bold mb-4">
+                <h1 className="text-lg sm:text-lg md:text-xl lg:text-4xl font-bold mb-4">
                     Discover Your Path to Becoming a Pro
                 </h1>
                 <p className="text-xs sm:text-xs md:text-base lg:text-lg mb-6">

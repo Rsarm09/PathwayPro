@@ -1,8 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';  // Add useState import here
+import { useOutletContext } from 'react-router-dom';
 import { FaRegPlayCircle, FaUser, FaCertificate, FaUsers, FaCalendarAlt, FaGlobe } from 'react-icons/fa';
 
 const CoursepageHero = () => {
+    
+    const { cart, setCart } = useOutletContext();
+    const [showPopup, setShowPopup] = useState(false);
+
+    const addToCart = () => {
+        
+        const newCourse = {
+            id: 1,  // Unique identifier for the course
+            title: "Python 101",
+            price: 99.99
+        };
+        setCart([...cart, newCourse]);
+        setShowPopup(true);
+    };
+
+    const continueShopping = () => {
+        setShowPopup(false);
+    };
+
+    const goToCheckout = () => {
+        setShowPopup(false);
+        // Redirect to checkout page
+        window.location.href = '/checkout';
+    };
+
     return (
         <div className="relative py-20 flex flex-col justify-center items-center bg-blueprimary">
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
@@ -10,7 +35,7 @@ const CoursepageHero = () => {
             <div className="relative z-10 px-6 text-white w-full max-w-screen-lg">
                 {/* Headline */}
                 <h1 className="text-3xl md:text-5xl font-bold mb-5 text-left">
-                Python 101
+                    Python 101
                 </h1>
 
                 {/* Course Details Section */}
@@ -46,12 +71,37 @@ const CoursepageHero = () => {
                         </div>
                     </div>
                     
+                    <div>
+                        <p className='text-bluedark' >$99.99</p>
+                    </div>
                     {/* Continue Button */}
-                    <Link 
-                    to="/course"
-                    className="mt-6 w-full bg-blueprimary hover:bg-bluedark text-white font-semibold py-2 px-4 rounded shadow-md transition duration-300 flex justify-center">
-                        Get Started
-                    </Link>
+                    <button
+                        onClick={addToCart}
+                        className="mt-6 w-full bg-blueprimary hover:bg-bluedark text-white font-semibold py-2 px-4 rounded shadow-md transition duration-300">
+                        Add to Cart
+                    </button>
+
+
+                    {showPopup && (
+                        <>
+                            {/* Overlay */}
+                            <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
+
+                            {/* Pop-up Message */}
+                            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 shadow-lg z-50 border-2 border-bluedark">
+                                <p className="text-bluedark text-bold text-center text-2xl">Course added to cart!</p>
+                                <div className="flex flex-col gap-5 p-5">
+                                    <button className="text-slate-100 bg-bluedark p-1" onClick={continueShopping}>
+                                        Continue Shopping
+                                    </button>
+                                    <button className="text-slate-100 bg-bluedark p-1" onClick={goToCheckout}>
+                                        Go to Checkout
+                                    </button>
+                                </div>
+                            </div>
+                        </>
+                    )}
+
                 </div>
             </div>
         </div>

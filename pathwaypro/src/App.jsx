@@ -9,6 +9,8 @@ import Homepage from './pages/Homepage';
 import Loginpage from './pages/Loginpage';
 import Signedinhomepage from './pages/Signedinhomepage';
 import Coursepage from './pages/Coursepage';
+import CheckoutPage from './pages/CheckoutPage';
+
 
 function App() {
 
@@ -20,12 +22,13 @@ function App() {
           <Route path='/login' element={<Loginpage />} />
           <Route path='/home' element={<Signedinhomepage />} />
           <Route path='/course' element={<Coursepage />} />
+          <Route path='/checkout' element={<CheckoutPage />} />
+         
+
         </Route>
       </Routes>
     </BrowserRouter>
     
-    
-
   )
 }
 

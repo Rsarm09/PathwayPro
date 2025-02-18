@@ -2,23 +2,29 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaSearch, FaBell, FaUserCircle, FaShoppingCart, FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ cart, setCart }) => {
+
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const removeFromCart = (courseId) => {
+    const newCart = cart.filter(course => course.id !== courseId);
+    setCart(newCart);
+  };
+
   return (
-    <header className="bg-bluedark h-22 shadow-md py-4 px-8 flex items-center justify-between">
+    <header className="bg-bluedark h-22 shadow-md py-8 px-20 flex items-center justify-between">
 
       {/* Logo */}
       <div className="flex items-center justify-center space-x-6">
         <Link to="/" className=" lg:text-4xl font-bold text-slate-100 md:text-xl">Pathway Pro</Link>
         
+      </div>
         <div className="hidden md:flex items-center space-x-6 text-slate-100">
         <Link to="/" className=" lg:text-lg hidden md:inline text-base font-normal text-slate-100">Explore</Link>
         </div>
-      </div>
 
       {/* Search Bar */}
-      <div className="lg:w-wull hidden md:flex items-center border border-gray-300 rounded-lg px-3 py-1 w-1/2 bg-gray-100 focus:ring-blueprimary md:w-1/5">
+      <div className="w-1/2 md:w-1/5 lg:w-1/3 hidden md:flex items-center border border-gray-300 rounded-lg px-3 py-1 bg-gray-100 focus:ring-blueprimary">
         <FaSearch className="text-gray-500" />
         <input
           type="text"
@@ -26,13 +32,17 @@ const Header = () => {
           className="ml-1 w-full bg-transparent focus:outline-none md:text-xs"
         />
       </div>
+        <Link to="/" className="lg:text-lg hidden md:inline text-base font-normal text-slate-100">Degree</Link>
+        <Link to="/" className="lg:text-lg hidden md:inline text-base font-normal text-slate-100">Career</Link>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-6 text-slate-100">
-        <Link to="/" className="lg:text-lg hidden md:inline text-base font-normal text-slate-100">Degree</Link>
-        <Link to="/" className="lg:text-lg hidden md:inline text-base font-normal text-slate-100">Career</Link>
-        <Link to="/"> 
+        {/* <Link to="/"> 
           <FaShoppingCart className="text-xl cursor-pointer hover:text-gray-400 transition" />
+        </Link> */}
+        <Link to="/checkout">
+          <FaShoppingCart className="text-xl cursor-pointer hover:text-gray-400 transition" />
+          {cart.length > 0 && <span className="ml-2 bg-red-500 text-white px-2 py-1 rounded-full">{cart.length}</span>}
         </Link>
         <Link to="/"> 
           <FaGlobe className="text-xl cursor-pointer hover:text-gray-400 transition" />

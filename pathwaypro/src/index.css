@@ -5,7 +5,7 @@
 }
 
 .mainTitle {
-  @apply text-3xl font-bold text-bluedark pb-5;
+  @apply text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-bluedark pb-5;
 }
 
 @theme {

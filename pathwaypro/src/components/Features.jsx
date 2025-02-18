@@ -3,56 +3,73 @@ import { FaChartBar, FaPlayCircle, FaPencilAlt, FaLaptop, FaClock, FaWallet } fr
 
 const Features = () => {
     return (
-        <section className="m-20 py-12">
+        <section className="m-12 py-12">
             {/* Heading Section */}
             <div className="text-center mb-12">
                 <h2 className="mainTitle">Why Choose Pathway Pro?</h2>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-15 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
                 {/* Feature Card */}
-                <div className="text-center">
+                <div className="text-center border-bluedark border-4 p-6">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
                         <FaChartBar className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Gurranteed Experts</h3>
-                    <p className="text-gray-600 mt-2">
-                    Learn from industry experts who bring real-world experience and top-quality education to every lesson. Our instructors are dedicated to providing insightful guidance, ensuring you get the best learning experience possible.
-                    </p>
+
+                    <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
+                        <li>Learn from industry experts with real-world experience.</li>
+                        <li>Receive top-quality education in every lesson.</li>
+                        <li>Gain insightful guidance from dedicated instructors.</li>
+                        <li>Ensure the best learning experience possible.</li>
+
+                    </ul>
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center">
+                <div className="text-center border-bluedark border-4 p-6">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
                         <FaPlayCircle className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Anytime, Anywhere</h3>
-                    <p className="text-gray-600 mt-2">
-                    You can study at your own pace, anytime and anywhere. Whether you prefer to learn in short bursts or deep-dive sessions, you have the freedom to create a schedule that works for you.
-                    </p>
+
+                    <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
+                        <li>Learn at your convenience, anytime and anywhere.</li>
+                        <li>Choose between short study sessions or deep dives.</li>
+                        <li>Customize your schedule to fit your lifestyle.</li>
+                        <li>Stay in control of your learning journey.</li>
+
+                    </ul>
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center">
+                <div className="text-center border-bluedark border-4 p-6">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
                         <FaPencilAlt className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Comprehensive Material</h3>
-                    <p className="text-gray-600 mt-2">
-                    We believe learning should be engaging and hands-on. That’s why our courses include interactive exercises, quizzes, and real-world projects to help reinforce your understanding and keep things exciting.
-                    </p>
+                    
+                    <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
+                        <li>Learning should be engaging and hands-on.</li>
+                        <li>Courses include interactive exercises and quizzes.</li>
+                        <li>Real-world projects help reinforce understanding.</li>
+                        <li>Stay motivated with exciting and dynamic lessons.</li>
+                    </ul>
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center">
+                <div className="text-center border-bluedark border-4 p-6">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
                         <FaWallet className="text-2xl text-bluedark" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">Flexible Payment</h3>
-                    <p className="text-gray-600 mt-2">
-                    Access affordable courses with flexible payment options. Invest in your education without breaking the bank.
-                    </p>
+                    <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
+                        <li>Access affordable courses with flexible payment options.</li>
+                        <li>Invest in your education without breaking the bank.</li>
+                        <li>Choose a payment plan that fits your budget.</li>
+                        <li>Get quality learning at an accessible price.</li>
+                    </ul>
                 </div>
             </div>
         </section>
