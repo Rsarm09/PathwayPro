@@ -6,9 +6,9 @@ import Testimonials from '../components/Testimonials';
 
 const Coursepage = () => {
     return (
-        <div className='course-page'>
+        <div>
             <CoursePageHero />
-            <main className="container mx-auto m-5 p-8">
+            <main className="container mx-auto m-5 p-8 px-8">
 
                 {/* Course Content Description */}
                 <section className='py-15'>

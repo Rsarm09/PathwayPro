@@ -23,9 +23,7 @@ const [weeklyData, setWeeklyData] = useState(WEEKLYDATA);
                     <p className="text-gray-700">{week.description}</p>
                    
                 </div>
-                <div>
-                    {week.progress}
-                </div>
+                
                 </div>
             ))}
             </div>

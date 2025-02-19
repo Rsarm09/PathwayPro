@@ -2,19 +2,42 @@ import React, { useState } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 
 const CheckoutPage = () => {
-
     const { cart, setCart } = useOutletContext();
     const navigate = useNavigate();
     
     const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
     const tax = subtotal * 0.12;
     const total = subtotal + tax;
+
     const [paymentMethod, setPaymentMethod] = useState('');
     const [cardInfo, setCardInfo] = useState({ number: '', cvc: '', expiration: '' });
     const [billingAddress, setBillingAddress] = useState({ address: '', city: '', province: '', postalCode: '', country: '' });
+    const [errorMessage, setErrorMessage] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+
+    const validateCardDetails = () => {
+        const cardNumberPattern = /^\d{16}$/;
+        const cvcPattern = /^\d{3}$/;
+        const expirationPattern = /^(0[1-9]|1[0-2])\/(\d{2})$/;
     
+        if (!cardNumberPattern.test(cardInfo.number) || !cvcPattern.test(cardInfo.cvc) || !expirationPattern.test(cardInfo.expiration)) {
+            setErrorMessage("Invalid payment details. Please try again.");
+            return false;
+        }
+        setErrorMessage('');
+        return true;
+    };
+
     const handlePayment = () => {
+        if (!billingAddress.address || !billingAddress.city || !billingAddress.province || !billingAddress.postalCode || !billingAddress.country || !paymentMethod) {
+            setErrorMessage("All fields are required.");
+            return;
+        }
+        
+        if (paymentMethod === 'Credit/Debit Card' && !validateCardDetails()) {
+            return;
+        }
+        
         setShowPopup(true);
         setTimeout(() => {
             setShowPopup(false);
@@ -26,13 +49,21 @@ const CheckoutPage = () => {
     return (
         <div className="container mx-auto p-5">
             <h1 className="text-4xl text-bluedark font-bold mb-4">Checkout</h1>
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
             <div className="mb-4">
                 <label className="block font-bold">Billing Address</label>
-                <input className="border p-2 w-full" type="text" placeholder="Address" required value={billingAddress.address} onChange={(e) => setBillingAddress({...billingAddress, address: e.target.value})} />
-                <input className="border p-2 w-full mt-2" type="text" placeholder="City" required value={billingAddress.city} onChange={(e) => setBillingAddress({...billingAddress, city: e.target.value})} />
-                <input className="border p-2 w-full mt-2" type="text" placeholder="Province" required value={billingAddress.province} onChange={(e) => setBillingAddress({...billingAddress, province: e.target.value})} />
-                <input className="border p-2 w-full mt-2" type="text" placeholder="Postal Code / ZIP Code" required value={billingAddress.postalCode} onChange={(e) => setBillingAddress({...billingAddress, postalCode: e.target.value})} />
-                <input className="border p-2 w-full mt-2" type="text" placeholder="Country" required value={billingAddress.country} onChange={(e) => setBillingAddress({...billingAddress, country: e.target.value})} />
+                {Object.keys(billingAddress).map((field) => (
+                    <input
+                        key={field}
+                        className="border p-2 w-full mt-2"
+                        type="text"
+                        placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                        required
+                        maxLength={50}
+                        value={billingAddress[field]}
+                        onChange={(e) => setBillingAddress({ ...billingAddress, [field]: e.target.value })}
+                    />
+                ))}
             </div>
             <div className="mb-4">
                 <label className="block font-bold">Payment Method</label>
@@ -53,11 +84,11 @@ const CheckoutPage = () => {
             {paymentMethod === 'Credit/Debit Card' && (
                 <div className="mb-4">
                     <label className="block font-bold">Card Number</label>
-                    <input className="border p-2 w-full" type="text" placeholder="1234 5678 9012 3456" required value={cardInfo.number} onChange={(e) => setCardInfo({...cardInfo, number: e.target.value})} />
+                    <input className="border p-2 w-full" type="text" placeholder="1234567890123456" maxLength={16} required value={cardInfo.number} onChange={(e) => setCardInfo({ ...cardInfo, number: e.target.value })} />
                     <label className="block font-bold">CVC</label>
-                    <input className="border p-2 w-full" type="text" placeholder="123" required value={cardInfo.cvc} onChange={(e) => setCardInfo({...cardInfo, cvc: e.target.value})} />
+                    <input className="border p-2 w-full" type="text" placeholder="123" maxLength={3} required value={cardInfo.cvc} onChange={(e) => setCardInfo({ ...cardInfo, cvc: e.target.value })} />
                     <label className="block font-bold">Expiration Date</label>
-                    <input className="border p-2 w-full" type="text" placeholder="MM/YY" required value={cardInfo.expiration} onChange={(e) => setCardInfo({...cardInfo, expiration: e.target.value})} />
+                    <input className="border p-2 w-full" type="text" placeholder="MM/YY" required value={cardInfo.expiration} onChange={(e) => setCardInfo({ ...cardInfo, expiration: e.target.value })} />
                 </div>
             )}
             <div className="mt-4">
@@ -78,8 +109,8 @@ const CheckoutPage = () => {
                 </div>
             )}
         </div>
-        );
-    };
-    
-   
+    );
+};
+
 export default CheckoutPage;
+
