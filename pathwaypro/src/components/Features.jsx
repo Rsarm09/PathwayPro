@@ -10,13 +10,14 @@ const Features = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-full">
+                
                 {/* Feature Card */}
-                <div className="text-center border-bluedark border-4 p-6">
+                <div className="text-center border-bluedark border-4 rounded-lg p-6">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
                         <FaChartBar className="text-2xl text-bluedark" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800">Gurranteed Experts</h3>
+                    <h3 className="text-lg font-semibold text-bluedark">Gurranteed Experts</h3>
 
                     <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
                         <li>Learn from industry experts with real-world experience.</li>
@@ -28,11 +29,11 @@ const Features = () => {
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center border-bluedark border-4 p-6">
+                <div className="text-center border-bluedark border-4 rounded-lg p-6">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
                         <FaPlayCircle className="text-2xl text-bluedark" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800">Anytime, Anywhere</h3>
+                    <h3 className="text-lg font-semibold text-bluedark">Anytime, Anywhere</h3>
 
                     <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
                         <li>Learn at your convenience, anytime and anywhere.</li>
@@ -44,11 +45,11 @@ const Features = () => {
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center border-bluedark border-4 p-6">
+                <div className="text-center border-bluedark border-4 rounded-lg p-6">
                     <div className="flex items-center justify-center w-16 h-16  mx-auto bg-gray-200 rounded-full mb-4">
                         <FaPencilAlt className="text-2xl text-bluedark" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800">Comprehensive Material</h3>
+                    <h3 className="text-lg font-semibold text-bluedark">Comprehensive Material</h3>
                     
                     <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
                         <li>Learning should be engaging and hands-on.</li>
@@ -59,11 +60,11 @@ const Features = () => {
                 </div>
 
                 {/* Feature Card */}
-                <div className="text-center border-bluedark border-4 p-6">
+                <div className="text-center border-bluedark border-4 rounded-lg p-6">
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-200 rounded-full mb-4">
                         <FaWallet className="text-2xl text-bluedark" />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800">Flexible Payment</h3>
+                    <h3 className="text-lg font-semibold text-bluedark">Flexible Payment</h3>
                     <ul className='list-disc flex flex-wrap gap-4 text-left text-sm text-bluedark m-2'>
                         <li>Access affordable courses with flexible payment options.</li>
                         <li>Invest in your education without breaking the bank.</li>

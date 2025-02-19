@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ZeroBar from './bar/ZeroBar';
+import SixtyBar from './bar/sixtyBar';
 
 const SignedInHero = () => {
     return (
@@ -21,11 +21,11 @@ const SignedInHero = () => {
                     <p className="text-2xl font-bold text-bluedark">Continue: Python 101</p>
                     <div className="flex justify-between items-center mb-2">
                         <p className="text-lg font-medium text-blueprimary">Your Progress</p>
-                        <span className="text-sm font-semibold text-blueprimary">0% Complete</span>
+                        <span className="text-sm font-semibold text-blueprimary">60% Complete</span>
                     </div>
 
                     {/* Progress Bar */}
-                    <ZeroBar/>
+                    <SixtyBar/>
                     
                     {/* Continue Button */}
                     <Link 

@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logoBlack.png'
 
 function Loginpage() {
     return (
         <div className="flex h-screen flex-col justify-center items-center px-6 sm:px-8 bg-gray-100">
             <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
                 {/* Logo */}
-                <h3 className="text-center text-xl font-bold">Logo</h3>
+                <div className='flex justify-center'>
+                    <img className='w-1/2' src={logo} alt="" />
+                </div>
 
                 {/* Heading */}
                 <h2 className="mt-6 text-center text-2xl font-bold text-gray-900">
@@ -57,7 +60,7 @@ function Loginpage() {
                     {/* Sign In Button */}
                     <div>
                         <Link
-                            to="/home"
+                            to="/continue"
                             className="flex w-full justify-center rounded-md bg-blueprimary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-bluedark transition focus:ring-blueprimary"
                         >
                             Sign in

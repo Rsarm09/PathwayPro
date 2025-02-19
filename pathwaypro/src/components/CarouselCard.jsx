@@ -61,7 +61,7 @@ function CarouselCard() {
                     <Link
                         to="/course"
                         onClick={handleClick}
-                        className="relative w-60 h-80 rounded overflow-hidden shadow-lg m-5 transition-transform duration-300 transform hover:scale-115 border-2 border-solid border-bluedark group cursor-pointer"
+                        className="relative w-60 h-80 rounded-lg overflow-hidden shadow-lg m-5 transition-transform duration-300 transform hover:scale-115 border-2 border-solid border-bluedark group cursor-pointer"
                         key={item.id}
                     >
                         {/* Background Image */}
@@ -85,14 +85,14 @@ function CarouselCard() {
                         </div>
 
                         {/* Hover Pills (Appear on Hover) */}
-                        <div className="absolute bottom-14 left-4 flex flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <span className="bg-blue-500 text-slate-100 text-xs font-semibold px-3 py-1 rounded-full">
+                        <div className="absolute bottom-14 left-4 flex flex-col gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span className="bg-blue-500 text-slate-100 text-xs font-semibold px-3 py-1 rounded-lg">
                                 Beginner-Friendly
                             </span>
-                            <span className="bg-green-500 text-slate-100  text-xs font-semibold px-3 py-1 rounded-full">
+                            <span className="bg-green-500 text-slate-100  text-xs font-semibold px-3 py-1 rounded-lg">
                                 Hands-On Projects
                             </span>
-                            <span className="bg-yellow-500 text-slate-100  text-xs font-semibold px-3 py-1 rounded-full">
+                            <span className="bg-yellow-500 text-slate-100  text-xs font-semibold px-3 py-1 rounded-lg">
                                 Certificate Included
                             </span>
                         </div>

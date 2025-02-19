@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 .mainBtn {
-  @apply bg-blueprimary text-slate-100 font-semibold px-6 py-3 rounded transition hover:bg-bluedark mb-6 ;
+  @apply bg-blueprimary text-slate-100 font-semibold px-6 py-3 rounded transition hover:bg-sky-900 mb-6 cursor-pointer;
+}
+
+.secBtn {
+  @apply bg-blueprimary hover:bg-sky-900 mb-6 cursor-pointer rounded;
 }
 
 .mainTitle {
   @apply text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-bluedark pb-5;
 }
+
 
 @theme {
   --color-blueprimary: #19759F;
@@ -24,5 +29,6 @@
 }
 
 body {
-  @apply bg-slate-100;
+  @apply bg-slate-100 ;
+  
 }

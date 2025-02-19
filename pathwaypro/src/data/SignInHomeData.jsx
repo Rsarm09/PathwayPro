@@ -6,14 +6,7 @@ import Img5 from "../assets/img-5.png";
 import Img6 from "../assets/img-6.png";
 
 
-export const CARDDATA = [
-    {
-        id: 1,
-        image: Img2,
-        title: "Python 101",
-        desc: "Learn Python fundamentals with hands-on exercises and real-world applications!"
-
-    },
+export const SIGNINHOMEDATA  = [
     {
         id: 2,
         image: Img3,
